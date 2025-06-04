@@ -10,10 +10,11 @@
         /* Gaya kustom untuk sedikit lebih menarik */
         body {
             font-family: 'Inter', sans-serif; /* Menggunakan font Inter */
-            /* Pastikan body tidak memiliki padding atau margin yang mengganggu fullscreen */
+            /* Pastikan body tidak memiliki padding atau margin yang mengganggu */
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Mencegah scroll saat iframe fullscreen */
+            /* Hapus overflow: hidden; di sini secara default */
+            /* overflow akan diatur oleh JavaScript saat iframe dimuat */
         }
         .btn-custom {
             /* Gaya dasar untuk tombol: padding, font, sudut membulat, bayangan, transisi */
@@ -129,8 +130,8 @@
             // Sembunyikan footer juga untuk tampilan fullscreen yang bersih
             mainFooter.classList.add('hidden');
 
-            // Opsional: Sesuaikan gaya body untuk pengalaman fullscreen yang lebih baik
-            document.body.style.overflow = 'hidden'; // Mencegah scroll
+            // Atur overflow: hidden; pada body hanya saat iframe dimuat
+            document.body.style.overflow = 'hidden'; 
         }
     </script>
 
